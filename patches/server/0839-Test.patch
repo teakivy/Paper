@@ -1,0 +1,19 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: TeakIvy <legocjones@gmail.com>
+Date: Mon, 27 Dec 2021 01:06:53 -0500
+Subject: [PATCH] Test
+
+
+diff --git a/src/main/java/org/spigotmc/SpigotCommand.java b/src/main/java/org/spigotmc/SpigotCommand.java
+index 3112a8695639c402e9d18710acbc11cff5611e9c..f75b212c4c69d4ecf00fb4340c24658b3f8da41d 100644
+--- a/src/main/java/org/spigotmc/SpigotCommand.java
++++ b/src/main/java/org/spigotmc/SpigotCommand.java
+@@ -20,6 +20,8 @@ public class SpigotCommand extends Command {
+     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
+         if (!testPermission(sender)) return true;
+ 
++        sender.sendMessage(ChatColor.YELLOW + "Spigot commands are deprecated and will be removed in a future version.");
++
+         if (args.length != 1) {
+             sender.sendMessage(ChatColor.RED + "Usage: " + usageMessage);
+             return false;
